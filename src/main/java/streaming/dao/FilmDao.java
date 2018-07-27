@@ -5,14 +5,16 @@
  */
 package streaming.dao;
 
-import org.springframework.data.repository.CrudRepository;
-import streaming.entity.Personne;
+import org.springframework.stereotype.Repository;
 
 /**
  *
- * @author formation
+ * @author Administrateur
  */
-public interface PersonneDAO extends CrudRepository<Personne, Long>{
+@Repository
+public class FilmDao {
+    public void removeAll(){
+        
+    }
     
-    public void findAllByNom(String n);
 }

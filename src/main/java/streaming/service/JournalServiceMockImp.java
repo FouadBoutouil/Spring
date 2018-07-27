@@ -5,18 +5,20 @@
  */
 package streaming.service;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 import org.springframework.stereotype.Service;
 
 /**
  *
- * @author formation
+ * @author Administrateur
  */
+// Si on utilise pas cette notation l'injection ne peux pas se faire
 @Service
-public class JournalService {
+public class JournalServiceMockImp{
+
     
-    public void journaliser(String msg){
-        
-        System.out.println( String.format("[%s] %s", new Date(), msg) );
+    public void log(String msg) {
+        System.out.println(LocalDateTime.now() + " : " + msg);
     }
+
 }

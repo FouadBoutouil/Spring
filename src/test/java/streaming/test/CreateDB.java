@@ -15,10 +15,11 @@ import streaming.config.SpringConfig;
  *
  * @author tom
  */
+
+// les deux lignes demarre spring
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes=SpringConfig.class)
 public class CreateDB {
-    
 
     @Test
     public void test(){
