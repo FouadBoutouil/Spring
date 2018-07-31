@@ -15,13 +15,13 @@ import org.springframework.stereotype.Service;
 @Service
 public class CompteurServiceImpl implements CompteurIService {
     @Autowired 
-    JournalServiceMockImp journal;   
+    JournalService journalService;   
     @Override
     public long listerTotalEnergyDepensee(String ville) {
         // un log dans le journal
         
         if (ville.equals("Grenoble")) {
-            journal.log("listertotalenergie pour ville de grenoble : " + 100000000);
+            journalService.enregisterMSG("listertotalenergie pour ville de grenoble : " + 100000000);
             return 100000000;
         }
 

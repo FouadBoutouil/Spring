@@ -6,21 +6,27 @@
 package streaming.service;
 
 import java.time.LocalDateTime;
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import streaming.dao.FilmDao;
+import streaming.entity.Film;
 
 /**
  *
  * @author Administrateur
  */
-@Service
-public class FilmService {
+public interface FilmService {
 
-    @Autowired
-    private FilmDao dao;
+    public Film findBytitre(String titre);
 
-    public void supprimTout() {
-        dao.removeAll();
-    }
+    public Film findById(long idFilm);
+
+    public void update(Film f);
+
+    public void insert(Film f);
+
+    public Iterable<Film> list();
+
+    public void removeAll();
 }

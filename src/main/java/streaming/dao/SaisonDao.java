@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package streaming.service;
+package streaming.dao;
 
 /**
  *
  * @author Administrateur
  */
-public interface JournalIService {
-    public void log(String msg);
+public interface SaisonDao {
+    
 }

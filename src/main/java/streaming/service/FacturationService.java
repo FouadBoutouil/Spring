@@ -13,13 +13,13 @@ import org.springframework.beans.factory.annotation.Autowired;
  */
 public class FacturationService {
     @Autowired
-    JournalServiceMockImp journal;
+    JournalService journal;
     @Autowired
     private CompteurIService compteurService;
 
     double calculerCoutEnergetique(String ville) {
         // log dans le journal
-        journal.log("calculerenerrgypour "+ville);
+        journal.enregisterMSG("calculerenerrgypour "+ville);
         return 0.14 * compteurService.listerTotalEnergyDepensee(ville);
     }
 
